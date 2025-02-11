@@ -43,7 +43,8 @@ def setup():
 		"systemLog": True,
 		"terminal": True,
 		"video": True,
-		"tags": ["Feature", "Magicleap", "Severe"]
+		"tags": ["Feature", "Magicleap", "Severe"],
+		"tunnel": True
 	}
 
 	chrome_options.set_capability("LT:Options", options)
