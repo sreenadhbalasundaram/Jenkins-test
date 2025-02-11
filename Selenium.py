@@ -27,12 +27,13 @@ def setup():
 		return random_string
 	
 	random_string = generate_random_string(12)
+	build = os.getenv("LT_BUILD_NAME")
 
 	options = {
 		"platform": "Windows 10",
 		"browserName": "Chrome",
 		"version": "latest",
-		"build": "Check build",
+		"build": build,
 		"name": random_string,
 		"plugin": "git-testng",
 		"performance": True,
