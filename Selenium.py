@@ -29,13 +29,17 @@ def setup():
 	random_string = generate_random_string(12)
 	build = os.getenv("LT_BUILD_NAME")
 	platform= os.getenv("LT_PLATFORM")
+	browser= os.getenv("LT_BROWSER_NAME")
+	browserversion= os.getenv("LT_BROWSER_VERSION")
+	buildnumber = os.getenv("LT_BUILD_NUMBER")
+
 
 	options = {
 		"platform": platform,
-		"browserName": "Chrome",
-		"version": "latest",
+		"browserName": browser,
+		"version": browserversion,
 		"build": build,
-		"name": random_string,
+		"name": buildnumber,
 		"plugin": "git-testng",
 		"performance": True,
 		"network": True,
