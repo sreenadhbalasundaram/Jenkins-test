@@ -28,9 +28,10 @@ def setup():
 	
 	random_string = generate_random_string(12)
 	build = os.getenv("LT_BUILD_NAME")
+	platform= os.getenv("LT_PLATFORM")
 
 	options = {
-		"platform": "Windows 10",
+		"platform": platform,
 		"browserName": "Chrome",
 		"version": "latest",
 		"build": build,
