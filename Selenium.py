@@ -32,7 +32,7 @@ def setup():
 	browser= os.getenv("LT_BROWSER_NAME")
 	browserversion= os.getenv("LT_BROWSER_VERSION")
 	buildnumber = os.getenv("LT_BUILD_NUMBER")
-	# tunnelname =os.getenv("LT_TUNNEL_NAME")
+	tunnelname =os.getenv("LT_TUNNEL_NAME")
 
 
 	options = {
@@ -41,7 +41,7 @@ def setup():
 		"version": browserversion,
 		"build": build,
 		"name": buildnumber,
-		"plugin": "git-testng",
+		# "plugin": "git-testng",
 		"performance": True,
 		"network": True,
 		"console": True,
@@ -51,11 +51,14 @@ def setup():
 		"terminal": True,
 		"video": True,
 		"tags": ["Feature", "Magicleap", "Severe"],
-		"tunnel": True
+		"tunnel": True,
+		"tunnelName": tunnelname
 		
 	}
 
 	chrome_options.set_capability("LT:Options", options)
+
+	print("Tunnel name is :", tunnelname )
 
 	driver = webdriver.Remote(
 		command_executor="https://" + username + ":" + authkey + hub,
