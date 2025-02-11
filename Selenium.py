@@ -51,8 +51,8 @@ def setup():
 		"terminal": True,
 		"video": True,
 		"tags": ["Feature", "Magicleap", "Severe"],
-		"tunnel": True,
-		"tunnelName": tunnelname
+		# "tunnel": True,
+		# "tunnelName": tunnelname
 	}
 
 	chrome_options.set_capability("LT:Options", options)
@@ -61,6 +61,8 @@ def setup():
 		command_executor="https://" + username + ":" + authkey + hub,
 		options=chrome_options
 	)
+
+	print("tunnelname is :",tunnelname)
 
 	return driver
 
