@@ -51,8 +51,8 @@ def setup():
 		"terminal": True,
 		"video": True,
 		"tags": ["Feature", "Magicleap", "Severe"],
-		"tunnel": True,
-		"tunnelName": tunnelname
+		"tunnel": True
+		# "tunnelName": tunnelname
 	}
 
 	chrome_options.set_capability("LT:Options", options)
