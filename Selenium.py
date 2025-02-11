@@ -32,6 +32,7 @@ def setup():
 	browser= os.getenv("LT_BROWSER_NAME")
 	browserversion= os.getenv("LT_BROWSER_VERSION")
 	buildnumber = os.getenv("LT_BUILD_NUMBER")
+	tunnelname =os.getenv("LT_TUNNEL_NAME")
 
 
 	options = {
@@ -50,7 +51,8 @@ def setup():
 		"terminal": True,
 		"video": True,
 		"tags": ["Feature", "Magicleap", "Severe"],
-		"tunnel": True
+		"tunnel": True,
+		"tunnelName": tunnelname
 	}
 
 	chrome_options.set_capability("LT:Options", options)
